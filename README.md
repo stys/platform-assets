@@ -60,7 +60,7 @@ Add plugin declaration to the `conf/play.plugins`
 
 ### Use in templates 
 
-Use it the same way as the built-in `Assets` (but drop the `routes` part at the beginning)
+Use it the same way as the built-in `Assets` (drop the `routes` part at the beginning)
 
 ```scala
 
