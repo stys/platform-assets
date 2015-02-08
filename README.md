@@ -18,7 +18,7 @@ libraryDependencies ++= Seq(
 ```
 
 Add an additional global template import to `build.sbt`
-```
+```sbt
 TwirlKeys.templateImports += "com.stys.platform.assets.Assets"
 ```
 
