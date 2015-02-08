@@ -1,4 +1,4 @@
-package assets;
+package com.stys.platform.assets;
 
 import play.Plugin;
 

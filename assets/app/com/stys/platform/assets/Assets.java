@@ -1,10 +1,10 @@
-package assets;
+package com.stys.platform.assets;
 
 import play.Play;
 
 /**
- * Makes assets pluggable
- * Usage: @assets.Assets.at('path/to/asset')
+ * Make assets routing pluggable
+ * Usage: @Assets.at('path/to/asset')
  */
 public class Assets {
 	
@@ -20,8 +20,7 @@ public class Assets {
 			plugin = Play.application().plugin(AssetsPlugin.class);
 			// If not registered
 			if (null == plugin) {
-				// Default implementation
-				plugin = new DefaultAssetsPlugin(Play.application());
+				throw new IllegalStateException("Class extending AssetsPlugin is not declared in play.plugins");
 			}
 		}
 		

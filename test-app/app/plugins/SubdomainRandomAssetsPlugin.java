@@ -1,11 +1,12 @@
-package assets;
+package plugins;
 
 import java.util.Random;
-
 import play.Application;
-import play.Logger;
+import com.stys.platform.assets.AssetsPlugin;
 
-
+/**
+ * Random subdomain in assets URL
+ */
 public class SubdomainRandomAssetsPlugin extends AssetsPlugin {
 
 	/**

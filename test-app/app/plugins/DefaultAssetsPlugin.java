@@ -1,16 +1,14 @@
-package assets;
+package plugins;
 
 import play.Application;
+import com.stys.platform.assets.AssetsPlugin;
 import controllers.routes;
 
-/**
- * Wrapper for the built-in assets controller
- */
 public class DefaultAssetsPlugin extends AssetsPlugin {
 
     /**
-     * Plugin constructor should take Play application
-     * @param application
+     * Plugin implementation must declare a constructor with 
+	 * single argument of type play.Application
      */
     public DefaultAssetsPlugin(Application application) {
         /* Empty */
@@ -18,12 +16,9 @@ public class DefaultAssetsPlugin extends AssetsPlugin {
 
     /**
      * Delegate to the build-in Assets controller
-     * @param file
-     * @return
      */
     @Override
     public String url(String file) {
         return routes.Assets.at(file).url();
     }
-
 }
