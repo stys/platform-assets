@@ -10,7 +10,7 @@ storage or CDN. It is also very useful for testing.
 
 Add resolver and dependency
 ```sbt
-resolvers += "Snapshots" at "https://raw.github.com/stys/maven-releases/master/"
+resolvers += "Platform releases" at "https://raw.github.com/stys/maven-releases/master/"
 
 libraryDependencies ++= Seq(
     "com.stys" %% "platform-assets" % "1.1.0"    
