@@ -4,7 +4,7 @@ name := "platform-assets"
 
 organization := "com.stys"
 
-version := "1.2.0"
+version := "1.3.0"
 
 scalaVersion := "2.11.7"
 
