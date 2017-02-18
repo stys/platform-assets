@@ -1,20 +1,20 @@
 package com.stys.platform.assets;
 
-import play.Configuration;
-import javax.inject.Inject;
+import play.Application;
 
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
+@Singleton
 public class CustomizedUrlAssetsService implements AssetsService {
 
     private static final String CONFIGURATION_ASSETS_URL_TEMPLATE_KEY = "com.stys.platform.assets.url.template";
 
-    private Configuration configuration;
-
     private String assetsUrlTemplate;
 
     @Inject
-    public CustomizedUrlAssetsService(Configuration configuration) {
-        this.configuration = configuration;
-        this.assetsUrlTemplate = configuration.getString(CONFIGURATION_ASSETS_URL_TEMPLATE_KEY);
+    public CustomizedUrlAssetsService(Application application) {
+        this.assetsUrlTemplate = application.configuration().getString(CONFIGURATION_ASSETS_URL_TEMPLATE_KEY);
     }
 
     @Override

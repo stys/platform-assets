@@ -11,7 +11,8 @@ public class DefaultAssetsModule extends Module {
     @Override
     public Seq<Binding<?>> bindings(Environment environment, Configuration configuration) {
         return seq(
-            bind(AssetsService.class).to(DefaultAssetsService.class)
+            bind(Assets.class).toSelf().eagerly(),
+            bind(AssetsService.class).to(DefaultAssetsService.class).eagerly()
         );
     }
 }
