@@ -7,7 +7,7 @@ public class DefaultAssetsService implements AssetsService {
 
     @Override
     public String url(String file) {
-        return "assets/" + file;
+        return "/assets/" + file;
     }
 
 }
